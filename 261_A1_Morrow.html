@@ -418,12 +418,13 @@ summary {
 </div>
 
 
-<div id="connecticut-public-use-and-benefit-land-registry-file-architecture" class="section level1">
-<h1>Connecticut Public Use and Benefit Land Registry File Architecture</h1>
-<p>This database contains land records held by the Connecticut Department of Energy and Environmental Protection (DEEP), Division of Land Acquisition and Management. Relevant archived documents for each parcel with a title, lease, or easement held by DEEP have been scanned and stored as PDFs herein. Each parcel transaction is numbered and contained in a single physical parcel file stored in the Division Archives located at 79 Elm Street, Hartford, CT. Any physical maps, survey notes, and other documents not relevant to the parcel file or relevant to multiple parcels are stored at the same location in the appropriate repositories.</p>
-<p>Notes from the construction of parcels in the Connecticut Public Use and Benefit Land Registry (PUBLR) parcel fabric are included here.</p>
-<div id="typographic-conventions" class="section level2">
-<h2>Typographic Conventions</h2>
+<div id="state-of-connecticut-public-use-and-benefit-land-registry-file-architecture" class="section level1">
+<h1>State of Connecticut Public Use and Benefit Land Registry File Architecture</h1>
+<p>This database contains land records held by the Connecticut Department of Energy and Environmental Protection (DEEP), Division of Land Acquisition and Management and the digitized parcels described in those documents. Relevant archived documents for each parcel with a title, lease, or easement held by DEEP have been scanned and stored as PDFs herein. Each parcel transaction is numbered and contained in a single physical parcel file stored in the Division Archives located at 79 Elm Street, Hartford, CT. Any physical maps, survey notes, and other documents that cannot physically be contained the the parcel file or relevant to multiple parcels are stored at the same location in the appropriate repositories.</p>
+<p>The Connecticut Public Use and Benefit Land Registry (PUBLR) project aims to digitize all parcels held by DEEP and associate appropriate attributes with each object in the parcel fabric. Notes from the construction of parcels in the parcel fabric are included here in addition to the parcel fabric itself.</p>
+<p>More information on the PUBLR project can be found <a href="https://ct.gov/DEEP/landregistry">here</a>.</p>
+<div id="typographic-conventions" class="section level3">
+<h3>Typographic Conventions</h3>
 <ul>
 <li><code>literal</code>: fixed parts of file or folder names</li>
 <li><em>variable</em>: variable parts of file or folder names
@@ -432,8 +433,8 @@ summary {
 </ul></li>
 </ul>
 </div>
-<div id="structure-and-naming-conventions" class="section level2">
-<h2>Structure and Naming Conventions</h2>
+<div id="structure-and-naming-conventions" class="section level3">
+<h3>Structure and Naming Conventions</h3>
 <ul>
 <li><code>README.md</code>: this document</li>
 <li><code>Parcel_Files\</code>: archived documents
@@ -446,34 +447,41 @@ summary {
 <li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>README.md</code>: additional notes from parcel fabric construction for the conserved area
 <ul>
 <li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>_Parcel</code><em>Parcel_Number</em><code>_CAD_</code><em>CAD_Number</em><code>.dwg</code>: numbered CAD files related to the parcel transaction</li>
-<li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>_Parcel</code><em>Parcel_Number</em><code>_file_</code><em>File_Number</em><code>.pdf</code>: numbered files related to the parcel transaction</li>
 <li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>_Parcel</code><em>Parcel_Number</em><code>_map_</code><em>Map_Number</em><code>.pdf</code>: numbered map related to the parcel transaction</li>
+<li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>_Parcel</code><em>Parcel_Number</em><code>_parcelfile.pdf</code>: scanned parcel file related to the parcel transaction</li>
 <li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>_Parcel</code><em>Parcel_Number</em><code>_README.md</code>: additional notes from parcel fabric construction of the parcel</li>
 <li><em>Area_Name</em><code>_</code><em>Area_Type</em><code>_Parcel</code><em>Parcel_Number</em><code>_survey_</code><em>survey_Number</em><code>.pdf</code>: numbered survey notes related to the parcel transaction</li>
 </ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li><code>LandRegistry_ACTIVE_v</code><em>Version_Number</em><code>.gdb\</code>:
+<li><code>LandRegistry_ACTIVE_v</code><em>Version_Number</em><code>.gdb\</code>: active file geodatabase containing the parcel fabric for the PUBLR Project *<code>Archive\</code>: prior schema versions of the parcel fabric
 <ul>
-<li><code>LandRegistry_ACTIVE\</code>: file geodatabase feature dataset for the PUBLR Project</li>
-<li><code>ParcelFabric_ACTIVE\</code>: parcel fabric for the PUBLR Project
-<ul>
-<li><code>ParcelFabric_ACTIVE_Control</code>: control points component of the parcel fabric</li>
-<li><code>ParcelFabric_ACTIVE_LinePoints</code>: line points component of the parcel fabric</li>
-<li><code>ParcelFabric_ACTIVE_Lines</code>: lines component of the parcel fabric</li>
-<li><code>ParcelFabric_ACTIVE_Parcels</code>: parcels component of the parcel fabric</li>
-<li><code>ParcelFabric_ACTIVE_Plans</code>: plans component of the parcel fabric</li>
-<li><code>ParcelFabric_ACTIVE_Points</code>: points component of the parcel fabric</li>
-</ul></li>
-<li><code>ParcelDimensions</code>: file geodatabase feature class</li>
-<li><code>lrPlanToParcels</code>: file geodatabase relationship class</li>
-<li><code>lrParcelToLines</code>: file geodatabase relationship class</li>
+<li><code>LandRegistry_ACTIVE_v</code><em>Version_Number</em><code>.gdb\</code>: archived file geodatabase containing the parcel fabric for the PUBLR Project</li>
 </ul></li>
 </ul>
+<div id="area-types-and-abbreviations" class="section level4">
+<h4>Area Types and Abbreviations</h4>
+<ul>
+<li>DEEP Owned Waterbody (WB)</li>
+<li>Flood Control (FC)</li>
+<li>Fish Hatchery (FH)</li>
+<li>Field Trial Area (FTA)</li>
+<li>Historic Preserve (HP)</li>
+<li>Natural Area Preserve (NAP)</li>
+<li>Other (O)</li>
+<li>State Forest (SF)</li>
+<li>State Park (SP)</li>
+<li>State Park Scenic Reserve (SPSR)</li>
+<li>State Park Trail (SPT)</li>
+<li>Water Access (WA)</li>
+<li>Wildlife Management Area (WMA)</li>
+<li>Wildlife Sanctuary (WS)</li>
+</ul>
 </div>
-<div id="example" class="section level2">
-<h2>Example</h2>
+</div>
+<div id="example" class="section level3">
+<h3>Example</h3>
 <p><em>Roger Tory Peterson Wildlife Management Area Parcels 001 and 002</em></p>
 <ul>
 <li><code>Roger_Tory_Peterson_WMA\</code>
@@ -482,20 +490,24 @@ summary {
 <li><code>Roger_Tory_Peterson_WMA_README.md</code>
 <ul>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_001_CAD_001.dwg</code></li>
-<li><code>Roger_Tory_Peterson_WMA_Parcel_001_file_01.pdf</code></li>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_001_map_01.pdf</code></li>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_001_map_02.pdf</code></li>
+<li><code>Roger_Tory_Peterson_WMA_Parcel_001_parcelfile.pdf</code></li>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_001_README.md</code></li>
 </ul></li>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_002\</code>
 <ul>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_002_CAD_001.dwg</code></li>
-<li><code>Roger_Tory_Peterson_WMA_Parcel_002_file_01.pdf</code></li>
+<li><code>Roger_Tory_Peterson_WMA_Parcel_002_parcelfile.pdf</code></li>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_002_README.md</code></li>
 <li><code>Roger_Tory_Peterson_WMA_Parcel_002_survey_01.pdf</code></li>
 </ul></li>
 </ul></li>
 </ul>
+</div>
+<div id="note" class="section level3">
+<h3>Note</h3>
+<p>This is an actual project I worked on from 2016 until 2019. Unfortunately server failure combined with a hiring freeze and ensuing lack of senior GIS personnel has prevented the 8000+ acres of parcels my team of interns and I built from going live in the (now broken) portal linked <a href="https://ct.gov/DEEP/landregistry">here</a>.</p>
 </div>
 </div>
 
