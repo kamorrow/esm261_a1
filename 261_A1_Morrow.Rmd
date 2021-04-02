@@ -1,0 +1,53 @@
+---
+title: "ESM 261: Assignment 1"
+subtitle: "My Files and Folders"
+author: "Keene Morrow"
+date: "4/1/2021"
+output: html_document
+---
+
+# Connecticut Public Use and Benefit Land Registry File Architecture
+
+This database contains land records held by the Connecticut Department of Energy and Environmental Protection (DEEP), Division of Land Acquisition and Management.  Relevant archived documents for each parcel with a title, lease, or easement held by DEEP have been scanned and stored as PDFs herein.  Each parcel transaction is numbered and contained in a single physical parcel file stored in the Division Archives located at 79 Elm Street, Hartford, CT.  Any physical maps, survey notes, and other documents not relevant to the parcel file or relevant to multiple parcels are stored at the same location in the appropriate repositories.
+
+Notes from the construction of parcels in the Connecticut Public Use and Benefit Land Registry (PUBLR) parcel fabric are included here.
+
+## Typographic Conventions
+
+* ```literal```: fixed parts of file or folder names
+* *variable*: variable parts of file or folder names
+  + *yyyy-mm-dd*: a calendar date in ISO 8601 format
+  
+## Structure and Naming Conventions
+
+* ```README.md```: this document
+* ```Parcel_Files\```: archived documents
+  + *Area_Type*```\```\: Files related to specific area types, such as Wildlife Management Areas, State Parks, and Open Space and Watershed Land Acquisition Grant Program (OSWA) conservation easements
+    + *Area_Name*```_```*Area_Type*```\```: Files related to a specific conserved area
+      + *Area_Name*```_```*Area_Type*```_Parcel```*Parcel_Number*```\```: Files related to a specific parcel transaction
+      + *Area_Name*```_```*Area_Type*```README.md```: additional notes from parcel fabric construction for the conserved area
+        + *Area_Name*```_```*Area_Type*```_Parcel```*Parcel_Number*```_CAD_```*CAD_Number*```.dwg```: numbered CAD files related to the parcel transaction
+        + *Area_Name*```_```*Area_Type*```_Parcel```*Parcel_Number*```_file_```*File_Number*```.pdf```: numbered files related to the parcel transaction
+        + *Area_Name*```_```*Area_Type*```_Parcel```*Parcel_Number*```_map_```*Map_Number*```.pdf```: numbered map related to the parcel transaction
+        + *Area_Name*```_```*Area_Type*```_Parcel```*Parcel_Number*```_README.md```: additional notes from parcel fabric construction of the parcel
+        + *Area_Name*```_```*Area_Type*```_Parcel```*Parcel_Number*```_survey_```*survey_Number*```.pdf```: numbered survey notes related to the parcel transaction
+* ```LandRegistry_ACTIVE_v```*Version_Number*```.gdb\```:file geodatabase containing the parcel fabric for the PUBLR Project
+
+
+## Example
+
+*Roger Tory Peterson Wildlife Management Area Parcels 001 and 002*
+
+* ```Roger_Tory_Peterson_WMA\```
+  + ```Roger_Tory_Peterson_WMA_Parcel_001\```
+  + ```Roger_Tory_Peterson_WMA_README.md```
+    + ```Roger_Tory_Peterson_WMA_Parcel_001_CAD_001.dwg```
+    + ```Roger_Tory_Peterson_WMA_Parcel_001_file_01.pdf```
+    + ```Roger_Tory_Peterson_WMA_Parcel_001_map_01.pdf```
+    + ```Roger_Tory_Peterson_WMA_Parcel_001_map_02.pdf```
+    + ```Roger_Tory_Peterson_WMA_Parcel_001_README.md```
+  + ```Roger_Tory_Peterson_WMA_Parcel_002\```
+    + ```Roger_Tory_Peterson_WMA_Parcel_002_CAD_001.dwg```
+    + ```Roger_Tory_Peterson_WMA_Parcel_002_file_01.pdf```
+    + ```Roger_Tory_Peterson_WMA_Parcel_002_README.md```
+    + ```Roger_Tory_Peterson_WMA_Parcel_002_survey_01.pdf```
